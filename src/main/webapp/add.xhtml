@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+   xmlns:h="http://java.sun.com/jsf/html"
+   xmlns:f="http://java.sun.com/jsf/core"
+   xmlns:p="http://primefaces.org/ui">
+  <h:head>
+   <title>
+    Login
+   </title>
+  </h:head>
+ <h:body>
+   <h1 align="center">Agenda personal de #{vista.nombre}</h1>
+   <h2 align="center" style="color:blue">Añadir contacto</h2>   
+   <h:form>
+    <h:panelGrid style="margin: 0 auto; margin-top:3em;">
+     <p:outputLabel value="Nombre " style="font-weight:bold; margin-top=1em;" />
+     <p:inputText value="#{agenda.nombreC}"/>
+     <p:outputLabel value="Apellidos" style="font-weight:bold; margin-top=1em;" />
+     <p:inputText value="#{agenda.apellido}"/>
+     <p:outputLabel value="Número de teléfono" style="font-weight:bold; margin-top=1em;" />
+     <p:inputText value="#{agenda.tlf}"/>
+     <p:outputLabel value="Dirección" style="font-weight:bold; margin-top=1em;" />
+     <p:inputText value="#{agenda.direccion}"/>
+     <p:outputLabel value="Nombre " style="font-weight:bold; margin-top=1em;" />
+     <p:inputText value="#{agenda.descripcion}"/>     
+     <p:commandButton value="Añadir" action="#{agenda.addContacto}" style="margin-top:2em; position:relative; left:35px"/>
+     <p:commandButton value="Volver al menú" action="#{vista.volver}" style="margin-top:2em; position:relative; left:30px"/>	      
+    </h:panelGrid>
+   </h:form>
+ </h:body>
+</html>

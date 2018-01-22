@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+   xmlns:h="http://java.sun.com/jsf/html"
+   xmlns:f="http://java.sun.com/jsf/core"
+   xmlns:p="http://primefaces.org/ui">
+  <h:head>
+   <title>
+    Login
+   </title>
+  </h:head>
+ <h:body>
+   <h1 align="center">Tu agenda personal</h1>
+   <h2 align="center" style="color:brown">Registro</h2>   
+   <h:form>
+    <h:panelGrid style="margin: 0 auto; margin-top:5em;">
+     <p:outputLabel align="center" value="Usuario" style="font-weight:bold" />
+     <p:inputText value="#{agenda.nombre}"/>
+     <p:outputLabel align="center" value="Contraseña" style="font-weight:bold" />
+     <p:password value="#{agenda.passwd}"/>
+     <p:commandButton value="Realizar registro" action="#{agenda.registro}" style="position:relative; left:65px; margin-top: 2em; background-color:purple;"/>
+     <p:commandButton value="Volver al login" action="#{vista.login}" style="position:relative; left:65px; margin-top: 2em; background-color:purple;"/>     
+    </h:panelGrid>
+   </h:form>
+ </h:body>
+</html>

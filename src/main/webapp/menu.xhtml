@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+   xmlns:h="http://java.sun.com/jsf/html"
+   xmlns:f="http://java.sun.com/jsf/core"
+   xmlns:p="http://primefaces.org/ui">
+  <h:head>
+   <title>
+    Menu
+   </title>
+  </h:head>
+ <h:body>
+	  <h1 align="center">Agenda personal de #{vista.nombre}</h1>
+	  <h2 align="center" style="color:green;">Menú: </h2>
+	  <h:form>	
+		<h:panelGrid style="margin: 0 auto; margin-top:3em;">
+     	<p:commandButton value="1. Añadir un contacto" action="#{vista.add}" style="margin-top:2em;"/>
+     	<p:commandButton value="2. Modificar un contacto" action="#{vista.set}" style="margin-top:2em;"/>
+     	<p:commandButton value="3. Eliminar un contacto" action="#{vista.delete}" style="margin-top:2em;"/>
+     	<p:commandButton value="4. Mostrar contactos" action="#{vista.mostrarTodos}" style="margin-top:2em;"/>
+     	<p:commandButton value="Logout" action="#{agenda.logout}" style="margin-top:2em;"/>		    			
+	  </h:panelGrid>
+	  </h:form>	
+  </h:body>	    
+</html>

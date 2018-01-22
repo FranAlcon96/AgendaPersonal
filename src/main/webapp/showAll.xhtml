@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+   xmlns:h="http://java.sun.com/jsf/html"
+   xmlns:f="http://java.sun.com/jsf/core"
+   xmlns:p="http://primefaces.org/ui">
+  <h:head>
+   <title>
+    Menu
+   </title>
+  </h:head>
+ <h:body>
+	  <h1 align="center">Agenda personal de #{vista.nombre}</h1>
+	  <h2 align="center" style="color:green;">Lista de personas: </h2>
+	<p:dataTable var="c" value="#{vista.contactos}">
+	    <p:column headerText="Nombre">
+	        <h:outputText value="#{c.nombre}" />
+	    </p:column>
+	 
+	    <p:column headerText="Apellidos">
+	        <h:outputText value="#{c.apellido}" />
+	    </p:column>
+	 
+	    <p:column headerText="Teléfono">
+	        <h:outputText value="#{c.tlf}" />
+	    </p:column>
+	    
+	    <p:column headerText="Dirección">
+	        <h:outputText value="#{c.dir}" />
+	    </p:column>
+
+	    <p:column headerText="Descripción">
+	        <h:outputText value="#{c.descripcion}" />
+	    </p:column>
+	    
+	 
+	</p:dataTable>	  
+	  <h:form>
+     	<p:commandButton value="Volver al menú" action="#{vista.volver}"/>	      
+	  </h:form>
+  </h:body>	    
+</html>
